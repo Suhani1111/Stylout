@@ -22,7 +22,7 @@ function sendOTP() {
         localStorage.setItem("signupEmail", email);
         localStorage.setItem("signupPassword", password);
         localStorage.setItem("isVerified", "false");
-        alert("Sign-up successful! Proceed to Login.");
+        alert("Sign-up successful ! Proceed to Login.");
         window.location.href = "login.htm";
     }
 
