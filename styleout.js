@@ -22,28 +22,11 @@ function sendOTP() {
         localStorage.setItem("signupEmail", email);
         localStorage.setItem("signupPassword", password);
         localStorage.setItem("isVerified", "false");
-        alert("Sign-up successful! Proceed to OTP verification.");
-        window.location.href = "otp.htm";
+        alert("Sign-up successful! Proceed to Login.");
+        window.location.href = "login.htm";
     }
 
   }
-
-function verifyOTP() {
-  const otp1 = document.getElementById("otp1").value.trim();
-  const otp2 = document.getElementById("otp2").value.trim();
-  const otp3 = document.getElementById("otp3").value.trim();
-  const otp4 = document.getElementById("otp4").value.trim();
-
-  const enteredOTP = otp1 + otp2 + otp3 + otp4;
-
-
-  if (enteredOTP === "1234") {
-    alert("OTP verified.Account created successfully!");
-    localStorage.setItem("isVerified", "true");
-    window.location.href = "styleout.htm";
-  } else {
-    alert("Invalid OTP. Try 1234 as dummy.")}
-}
   
   function login() {
     const email = document.getElementById("loginEmail").value.trim();
@@ -59,15 +42,3 @@ function verifyOTP() {
       alert("Wrong email or password.");
     }
   }
-  const otpInputs = document.querySelectorAll(".optin input");
-
-  if (otpInputs.length > 0) {
-    otpInputs.forEach((input, index) => {
-      input.addEventListener("input", () => {
-        if (input.value.length === 1 && index < otpInputs.length - 1) {
-          otpInputs[index + 1].focus();
-        }
-      });
-    });
-  }
-  
